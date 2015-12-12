@@ -1,6 +1,6 @@
 java -cp ./java Filter
 
-./word2vec/word2vec -train ./data/training.txt -output ./data/features.txt -size 3 -min-count 1
+./word2vec/word2vec -train ./data/training.txt -output ./data/features.txt -size 10 -min-count 3
 
 java -cp ./java FeatureAggregator
 
@@ -8,4 +8,4 @@ java -cp ./java FeatureAggregator
 
 ./libsvm/svm-predict ./data/testing-set.txt ./data/training-model.txt ./data/prediction.txt
 
-java -cp ./java FeatureAggregator
+java -cp ./java Recommender

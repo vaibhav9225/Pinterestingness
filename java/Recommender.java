@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Filter{
+class Recommender{
 	public static void main(String[] args) throws Exception{
 		BufferedReader reader = new BufferedReader(new FileReader(new File("./data/testing-data.txt")));
 		BufferedReader readerP = new BufferedReader(new FileReader(new File("./data/prediction.txt")));
@@ -10,7 +10,7 @@ class Filter{
 		while((line = reader.readLine()) != null){
 			String prediction = readerP.readLine().trim();
 			if(prediction.equals("1")){
-				writer.write(line);
+				writer.write(line + "\n");
 			}
 		}
 		writer.close();
